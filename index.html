@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,36 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/picnicss/6.2.5/picnic.min.css" crossorigin="anonymous">
     <title>Greeting Card Creator</title>
 </head>
+
 <body>
     <nav>
         <h3>Greeting Card Creator</h1>
 
     </nav>
     <style>
-   .search-box{
-       padding-top: 3em;
-       margin-left: auto;
-   } 
+        .search-box {
+            padding-top: 3em;
+            margin-left: auto;
+        }
+
+        
     </style>
     <div class="flex four">
 
-    <label class="flex full search-box"><input type="text" placeholder="Search Images"></label>
-
+        <label class="flex full search-box"><input type="text" placeholder="Search Images"></label>
+        <div id="images"></div>
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/fredwu/jquery-endless-scroll/2.0-rewrite/js/jquery.endless-scroll.js"></script>
+    <script>   
+    images = $("#images").
+   $("#images").endlessScroll(content:function(){
+
+
+   }) 
     
+     </script>
 </body>
+
 </html>
