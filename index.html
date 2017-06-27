@@ -17,19 +17,18 @@
         <div class="container-fluid">
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header"
                 aria-expanded="false" aria-label="Toggle navigation"></button>
-            <a href="#" class="navbar-brand">Album</a>
+            <!--<a href="#" class="navbar-brand">Album</a>-->
         </div>
     </div>
 
     <!--Jumbotron-->
     <section class="jumbotron text-xs-center">
         <div class="container">
-            <h1 class="jumbotron-heading">Album example</h1>
-            <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet,
-                but not too short so folks don't simply skip over it entirely.</p>
+            <h1 class="jumbotron-heading">Choose Background Picture</h1>
+            <p class="lead text-muted">Choose a great stock photo courtesy of <a class="text-muted" href="https://www.pexels.com/">Pexels</a> or upload your own</p>
             <p>
                 <button class="btn btn-primary" data-toggle="modal" data-target="#pictureChooser">Select Picture</button>
-                <a href="#" class="btn btn-secondary">Secondary action</a>
+                <label class="btn btn-secondary" style="margin-bottom:auto;"><input type="file" style="display:none;">Upload Photo </label>
             </p>
         </div>
     </section>
@@ -45,13 +44,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
+                                <input type="text" id="photoSearch" class="form-control" placeholder="Search for...">
                                 <span class="input-group-btn">
         <button class="btn btn-secondary" type="button" onclick="searchPicture()">Go!</button>
       </span>
                             </div>
                         </div>
-                        <div class="row">
+                        <div id="photosDisplay" class="row">
                         </div>
                     </div>
                 </div>
@@ -69,6 +68,7 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
         crossorigin="anonymous"></script>
+    <script src="search.js"></script>
 </body>
 
 </html>
