@@ -1,6 +1,7 @@
 $('#photoSearch').on('keypress', (e) => {
     if (e.which == 13) {
-        searchPicture();
+        document.getElementById('photosDisplay').innerHTML = ""
+        searchPicture()
     }
 })
 function searchPicture(){
@@ -16,7 +17,10 @@ function searchPicture(){
 
 function infiniteScrollImages(images) {
     for (pix in images.photos){
-        let pixNode = document.createElement('img').setAttribute("src", images.photos[pix].src.original)
+        let pixNode = document.createElement('img')
+        pixNode.src = images.photos[pix].src.original
+        pixNode.className = "img-thumbnail"
+        console.log(pixNode)
         document.getElementById('photosDisplay').appendChild(pixNode)
     }
 }
