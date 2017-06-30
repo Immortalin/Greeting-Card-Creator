@@ -20,7 +20,12 @@ function infiniteScrollImages(images) {
         let pixNode = document.createElement('img')
         pixNode.src = images.photos[pix].src.original
         pixNode.className = "img-thumbnail"
-        console.log(pixNode)
         document.getElementById('photosDisplay').appendChild(pixNode)
+        console.log(pixNode)
+        // https://masonry.desandro.com/#getting-started
+        const masonry = new Masonry('grid', {
+            itemSelector: '.grid-pix',
+
+        })
     }
 }
