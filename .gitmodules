@@ -1,0 +1,3 @@
+[submodule "miniPaint"]
+	path = miniPaint
+	url = https://github.com/viliusle/miniPaint
