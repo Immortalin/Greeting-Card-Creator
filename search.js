@@ -15,6 +15,21 @@ function searchPicture(){
     })
 }
 
+function nextPage(nextPageUrl){
+    $.ajax({
+        url: nextPageUrl,
+        headers: {
+            "Authorization": "563492ad6f9170000100000172ef63d0155144725a94b9b7b795b842"
+        },
+        success: (data) => {
+            document.getElementById('photosDisplay').removeChild(document.getElementById('photosDisplay').lastChild)
+            infiniteScrollImages(data)
+        }
+    })
+}
+
+// Next page boolean checks if it is necessary to clear the search results div
+// If it is true, then it would just append to existing data
 function infiniteScrollImages(images) {
     for (pix in images.photos){
         // let pixNode = document.createElement('img')
@@ -37,12 +52,19 @@ function infiniteScrollImages(images) {
         pixNode.appendChild(pixNodeImg)
         pixNode.appendChild(pixNodeOverlay)
         document.getElementById('photosDisplay').appendChild(pixNode)
-        console.log(pixNode)
         // https://masonry.desandro.com/#getting-started
         // const masonry = new Masonry('grid', {
         //     itemSelector: '.grid-pix',
 
         // })
+    }
+    console.log(images)
+    if (images.photos.length > 0 && images.next_page != undefined){
+        let nextPageBtn = document.createElement("button") 
+        nextPageBtn.innerHTML = "More Photos"
+        let onClickContent = "nextPage(\"" + images.next_page + "\")"
+        nextPageBtn.setAttribute("onclick", onClickContent) 
+        document.getElementById('photosDisplay').appendChild(nextPageBtn)
     }
     // $("select[name='image-selector']").imagepicker()
 }
