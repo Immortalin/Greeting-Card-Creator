@@ -8,7 +8,7 @@ git clone --recursive https://github.com/Immortalin/Greeting-Card-Creator
 If miniPaint submodule is edited, rebase upon fork
 
 ## Usage: Use live-server for now until a proper one is writter 
-Note: if port 3000 is being used, feel free to change to as different port
+Note: if port 3000 is being used, feel free to change to a different port
 ```shell
     cd Greeting-Card-Creator
     npm i -g live-server
